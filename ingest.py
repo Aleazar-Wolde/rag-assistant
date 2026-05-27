@@ -16,7 +16,6 @@ def split_into_chunks(pages):
     )
     chunks = splitter.split_text(pages)
     return chunks
-
 # 3. convert the chunks into vectors
 def convert_to_vectors(chunks):
     pass
