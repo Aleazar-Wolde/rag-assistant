@@ -18,7 +18,10 @@ def split_into_chunks(pages):
     return chunks
 # 3. convert the chunks into vectors
 def convert_to_vectors(chunks):
-    pass
+    # Initialize the embedding model
+    embedding_model = chromadb.EasyEmbed()
+    vectors = embedding_model.embed_documents(chunks)
+    return vectors
 # 4. store the vectors in the chromadb database
 def store_in_chromadb(vectors):
     pass
